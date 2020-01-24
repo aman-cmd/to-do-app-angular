@@ -1,0 +1,6 @@
+<app-header></app-header>
+<div class="container">
+  <br>
+  <app-add-task (sendTask)="addTask($event)"></app-add-task>
+  <app-todos [todoArr]="taskArr"></app-todos>
+</div>
