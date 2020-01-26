@@ -23,6 +23,13 @@ export class TodosComponent implements OnInit {
       return 'rgb(207, 228, 252)'
     }
   }
+  getDecoration(i:number){
+    if(this.todoArr[i].checked==true){
+      return 'line-through'
+    }else{
+      return 'none'
+    }
+  }
 
   ngOnInit() {
   }

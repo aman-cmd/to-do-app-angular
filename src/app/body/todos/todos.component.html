@@ -3,7 +3,7 @@
 <div *ngFor="let todo of todoArr;let i=index">
     <mat-card class="card" [ngStyle]="{backgroundColor: getBackgroundColor(i)}">
         <mat-checkbox  class="example-margin" [(ngModel)]="todoArr[i].checked"></mat-checkbox>
-        <b>{{i+1}}.</b> {{todo.task}}
+        <b>{{i+1}}.</b> <span [ngStyle]="{textDecoration: getDecoration(i)}">{{todo.task}}</span>
         <button mat-button class="button" (click)="removeThis(i)">
             <mat-icon class="button" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
         </button>
